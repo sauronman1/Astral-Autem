@@ -8,7 +8,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Astral Autem/Scripts/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/e6/3532d2dc/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Astral Autem/Scripts/CHECKIT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,6 +27,7 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/SpawnerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/CHECKIT.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Scaler.cs" />
       </list>
     </option>
   </component>
@@ -79,6 +79,7 @@
       <workItem from="1599642805923" duration="4533000" />
       <workItem from="1599732504130" duration="5203000" />
       <workItem from="1599810026190" duration="8363000" />
+      <workItem from="1600019532721" duration="1785000" />
     </task>
     <servers />
   </component>
