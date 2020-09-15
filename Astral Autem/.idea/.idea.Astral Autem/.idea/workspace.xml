@@ -27,15 +27,16 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/SpawnerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ShipController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Scaler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/CHECKIT.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/IWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Seeker.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ProjectileMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Seeker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/HomingMissile.cs" />
       </list>
     </option>
   </component>
@@ -93,6 +94,7 @@
       <workItem from="1600021934339" duration="57000" />
       <workItem from="1600022045751" duration="153000" />
       <workItem from="1600022363182" duration="12659000" />
+      <workItem from="1600161211203" duration="3799000" />
     </task>
     <servers />
   </component>

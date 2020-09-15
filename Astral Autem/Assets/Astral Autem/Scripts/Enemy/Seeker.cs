@@ -11,7 +11,7 @@ namespace FG {
 		private float _shooterCooldown;
 		private float _durationOfJourney = 20;
 		private WeaponManager _weaponManager;
-		
+		private GameObject _player;
 
 		public int healthPoints;
 
@@ -21,6 +21,7 @@ namespace FG {
 			_body = GetComponent<Rigidbody2D>();
 			_endPos = new Vector2(_transform.position.x, _transform.position.y-5);
 			_weaponManager = GetComponent<WeaponManager>();
+			_player = GameObject.Find("Player");
 		}
 
 		private void Update()
@@ -42,7 +43,7 @@ namespace FG {
 			
 			if (Vector2.Distance(_transform.position, _endPos) < 1)
 			{
-				Vector2 difference = GameObject.Find("Player").transform.position - transform.position;
+				Vector2 difference = _player.transform.position - transform.position;
 				float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 				_transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ - 90);
 			}

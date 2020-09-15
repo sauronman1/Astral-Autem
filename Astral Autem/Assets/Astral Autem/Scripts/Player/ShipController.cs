@@ -6,9 +6,11 @@ namespace FG {
 	{
 		[NonSerialized] public float sideMovementInput;
 		[NonSerialized] public float verticalMovementInput;
-		[NonSerialized] public bool shieldActivated;
+		[NonSerialized] public bool shieldActivated = false;
+		[NonSerialized] public bool missileFired = false;
 		public float playerSpeed;
 
+		[SerializeField] private GameObject _missile;
 		private Vector2 _movement;
 		private Vector2 _screenBounds;
 		private Vector2 _screenLockedPosition;
@@ -32,6 +34,7 @@ namespace FG {
 		{
 			Move();
 			Shield();
+			FireMissile();
 		}
 
 		private void Move()
@@ -52,6 +55,15 @@ namespace FG {
 			if (shieldActivated)
 			{
 				gameObject.transform.GetChild(0).gameObject.SetActive(true);
+			}
+		}
+
+		private void FireMissile()
+		{
+			if (missileFired)
+			{
+				Instantiate(_missile, _transform.position, _transform.rotation);
+				missileFired = true;
 			}
 		}
 	}

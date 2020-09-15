@@ -18,6 +18,7 @@ namespace FG {
 			_ship.verticalMovementInput = Input.GetAxis("Vertical");
 			_weaponManager.fired = Input.GetButtonDown("Fire1");
 			_ship.shieldActivated = Input.GetButtonDown("Shield");
+			_ship.missileFired = Input.GetButtonDown("FireMissile");
 		}
 	}
 }

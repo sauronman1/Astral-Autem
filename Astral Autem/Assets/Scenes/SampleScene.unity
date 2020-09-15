@@ -757,6 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5.34
+  _missile: {fileID: 4730966118037730926, guid: 7c49c0e5a22d39c47bf93d314da0b2af, type: 3}
 --- !u!114 &1613405343
 MonoBehaviour:
   m_ObjectHideFlags: 0
