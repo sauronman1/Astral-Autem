@@ -3,11 +3,14 @@
 namespace FG {
 	public class CHECKIT : MonoBehaviour {
 		
-	
-
 		[Range( 1, 128 )] public int count;
 		[Range( 0f, 90f )] public float spreadAngleDeg;
 
+		private void Start()
+		{
+			OnDrawGizmos();
+		}
+		
 		void OnDrawGizmos() {
 			// convert spread to radians
 			float angSpread = spreadAngleDeg * Mathf.Deg2Rad;
@@ -23,9 +26,8 @@ namespace FG {
 
 				// angle to direction
 				Vector2 pos = new Vector2( Mathf.Cos( angle ), Mathf.Sin( angle ) );
-
 				// draw
-				Gizmos.DrawLine( default, pos );
+				Gizmos.DrawLine( transform.position, pos );
 				Gizmos.DrawSphere( pos, 0.04f );
 			}
 		}

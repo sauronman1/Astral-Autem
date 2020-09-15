@@ -5,7 +5,8 @@ namespace FG {
 	public enum Weapon
 	{
 		Bullet,
-		Killer
+		Killer,
+		EnemyBullet
 	}
 	
 	public class WeaponManager : MonoBehaviour
@@ -32,6 +33,9 @@ namespace FG {
 				case Weapon.Killer:
 					iWeapon = gameObject.AddComponent<Killer>();
 					break;
+				case Weapon.EnemyBullet:
+					iWeapon = gameObject.AddComponent<EnemyProjectile>();
+					break;
 				default:
 					iWeapon = gameObject.AddComponent<Bullet>();
 					break;
@@ -45,7 +49,7 @@ namespace FG {
 
 		private void Start()
 		{
-				HandleWeapon();
+			HandleWeapon();
 		}
 
 		private void Update()
@@ -53,6 +57,7 @@ namespace FG {
 			if (fired)
 			{
 				Fire();
+				fired = false;
 			}
 
 			if (Input.GetKeyDown(KeyCode.C))

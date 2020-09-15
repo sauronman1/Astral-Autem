@@ -11,17 +11,15 @@
             <e p="CHECKIT.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="EnemySpawner.cs" t="Include" />
+              <e p="Seeker.cs" t="Include" />
             </e>
-            <e p="EnemySpawner.cs" t="Include" />
             <e p="IWeapon.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerInput.cs" t="Include" />
               <e p="ShipController.cs" t="Include" />
             </e>
-            <e p="PlayerInput.cs" t="Include" />
             <e p="ProjectileMovement.cs" t="Include" />
             <e p="Scaler.cs" t="Include" />
-            <e p="ShipController.cs" t="Include" />
             <e p="SpawnerData.cs" t="Include" />
             <e p="WeaponManager.cs" t="Include" />
           </e>
