@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5951436311445162477}
   - component: {fileID: 7052981918855201681}
   - component: {fileID: 7871097089712054273}
+  - component: {fileID: 4498791108599473270}
   m_Layer: 0
   m_Name: laserRed02 (1)
   m_TagString: PlayerBullet
@@ -156,6 +157,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.37}
   m_EdgeRadius: 0
+--- !u!50 &4498791108599473270
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479610835449731678}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3960375091301977069
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +190,7 @@ GameObject:
   - component: {fileID: 2791274497410460932}
   - component: {fileID: 2568121414573046462}
   - component: {fileID: 156638757279947050}
+  - component: {fileID: 3262226372884446683}
   m_Layer: 0
   m_Name: laserRed02 (2)
   m_TagString: PlayerBullet
@@ -279,6 +302,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.37}
   m_EdgeRadius: 0
+--- !u!50 &3262226372884446683
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3960375091301977069}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7363823979200362808
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +335,7 @@ GameObject:
   - component: {fileID: 6618714442829362061}
   - component: {fileID: 5137654062570880655}
   - component: {fileID: 1145234732247607023}
+  - component: {fileID: 4601853967261463932}
   m_Layer: 0
   m_Name: laserRed02
   m_TagString: PlayerBullet
@@ -402,3 +447,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.37}
   m_EdgeRadius: 0
+--- !u!50 &4601853967261463932
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7363823979200362808}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

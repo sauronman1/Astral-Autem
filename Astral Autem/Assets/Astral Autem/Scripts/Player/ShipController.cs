@@ -1,14 +1,17 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace FG {
 	public class ShipController : MonoBehaviour
 	{
 		[NonSerialized] public float sideMovementInput;
 		[NonSerialized] public float verticalMovementInput;
-		[NonSerialized] public bool shieldActivated = false;
 		[NonSerialized] public bool missileFired = false;
+		[NonSerialized] public float shieldInput;
 		public float playerSpeed;
+		public float shieldCooldown;
+		public float shieldDuration;
 
 		[SerializeField] private GameObject _missile;
 		[SerializeField][Range(5, 0)]private float _maxAllowedHeightWithinScreen;
@@ -20,7 +23,9 @@ namespace FG {
 		private float _playerWidth;
 		private float _playerHeight;
 		private float _inputAmount;
-		
+		public float shieldTimeSinceActivated;
+		public bool shieldActivated;
+
 		private void Start()
 		{
 			_transform = transform;
@@ -28,7 +33,6 @@ namespace FG {
 			_screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 			_playerWidth = _transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
 			_playerHeight = _transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
-			Debug.Log(_screenBounds.x + " " + _screenBounds.y);
 		}
 
 		private void Update()
@@ -53,9 +57,26 @@ namespace FG {
 
 		private void Shield()
 		{
-			if (shieldActivated)
+			if (shieldInput > 0 && shieldTimeSinceActivated > shieldCooldown)
+				shieldActivated = true;
+			
+			if (shieldTimeSinceActivated > shieldCooldown && !shieldActivated) 
+				shieldTimeSinceActivated = shieldCooldown;
+			
+			shieldTimeSinceActivated += Time.deltaTime;
+			if (shieldTimeSinceActivated > shieldCooldown)
 			{
-				gameObject.transform.GetChild(0).gameObject.SetActive(true);
+				if (shieldActivated)
+				{
+					gameObject.transform.GetChild(0).gameObject.SetActive(true);
+					if (shieldTimeSinceActivated > (shieldDuration + shieldCooldown))
+					{
+						gameObject.transform.GetChild(0).gameObject.SetActive(false);
+						shieldActivated = false;
+						shieldTimeSinceActivated = 0;
+					}
+				}
+
 			}
 		}
 
