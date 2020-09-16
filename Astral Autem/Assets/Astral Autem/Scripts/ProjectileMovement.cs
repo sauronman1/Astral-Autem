@@ -5,6 +5,8 @@ namespace FG {
 	{
 		private Transform _transform;
 		private Rigidbody2D _body;
+		
+		public int bulletDamage;
 
 		private void Start()
 		{
@@ -24,39 +26,15 @@ namespace FG {
 
 		private void Move()
 		{
+			//TODO ändra alla så att de använder Rigidbody för att röra sig
 			if (_body != null)
 			{
 				_body.velocity = _transform.up * 3;
 			}
 			else
-				_transform.Translate(_transform.up*0.01f);
+				_transform.Translate(_transform.up*0.01f,Space.Self);
 		}
 
-		private void OnTriggerEnter2D(Collider2D other)
-		{
-			if (other.CompareTag("Shield") && gameObject.CompareTag("EnemyBullet"))
-			{
-				Destroy(gameObject);
-			}
-			else
-			{
-				if ((other.CompareTag("Enemy") && gameObject.CompareTag("PlayerBullet")))
-				{
-					if (other.gameObject.GetComponent<Seeker>().healthPoints < 1)
-					{
-						Destroy(other.gameObject);
-					}
-					else
-					{
-						other.gameObject.GetComponent<Seeker>().healthPoints -= 1;
-					}
-					Destroy(gameObject);
-				}
-			}
-			if (other.CompareTag("Player") && gameObject.CompareTag("EnemyBullet"))
-			{
-				
-			}
-		}
+		
 	}
 }

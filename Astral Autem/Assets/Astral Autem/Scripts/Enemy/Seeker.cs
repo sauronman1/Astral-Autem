@@ -8,12 +8,12 @@ namespace FG {
 		private Rigidbody2D _body;
 		private Vector2 _endPos;
 		private float _movementTimer;
-		private float _shooterCooldown;
+		private float _timeSinceLastShot;
 		private float _durationOfJourney = 20;
 		private WeaponManager _weaponManager;
 		private GameObject _player;
 
-		public int healthPoints;
+		public float shooterCooldown;
 
 		private void Start()
 		{
@@ -27,11 +27,11 @@ namespace FG {
 		private void Update()
 		{
 			Move();
-			_shooterCooldown += Time.deltaTime;
-			if (_shooterCooldown > 1)
+			_timeSinceLastShot += Time.deltaTime;
+			if (_timeSinceLastShot > shooterCooldown)
 			{
 				Shoot();
-				_shooterCooldown = 0;
+				_timeSinceLastShot = 0;
 			}
 
 		}

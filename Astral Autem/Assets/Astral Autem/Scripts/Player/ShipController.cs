@@ -11,6 +11,7 @@ namespace FG {
 		public float playerSpeed;
 
 		[SerializeField] private GameObject _missile;
+		[SerializeField][Range(5, 0)]private float _maxAllowedHeightWithinScreen;
 		private Vector2 _movement;
 		private Vector2 _screenBounds;
 		private Vector2 _screenLockedPosition;
@@ -46,7 +47,7 @@ namespace FG {
 			_screenLockedPosition.x = Mathf.Clamp(_transform.position.x, _screenBounds.x * -1 + _playerWidth,
 				_screenBounds.x - _playerWidth);
 			_screenLockedPosition.y = Mathf.Clamp(_transform.position.y, _screenBounds.y * -1 + _playerHeight,
-				_screenBounds.y - _playerHeight);
+				_screenBounds.y - _playerHeight-_maxAllowedHeightWithinScreen);
 			_transform.position = _screenLockedPosition;
 		}
 
