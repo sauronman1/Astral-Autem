@@ -11,6 +11,7 @@ TagManager:
   - Missile
   - Blaster
   - ScatterShot
+  - BulletBoundary
   layers:
   - Default
   - TransparentFX

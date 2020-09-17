@@ -5,7 +5,7 @@ namespace FG {
 	public class EnemySpawner : MonoBehaviour
 	{
 		[SerializeField] private bool _randomizePosition = false;
-		private float _timeUntilWaveStart;
+		public int _timeUntilWaveStart;
 		private float _waitTimeBetweenSpawns;
 		private GameObject _enemy;
 		private float _enemyCount;
@@ -17,18 +17,19 @@ namespace FG {
 		private void Start()
 		{
 			_transform = transform;
-			StartCoroutine("StartWave");
 			_timeUntilWaveStart = data._timeUntilWaveStart;
 			_waitTimeBetweenSpawns = data._waitTimeBetweenSpawns;
 			_enemy = data._enemy;
 			_enemyCount = data._enemyCount;
 			_screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+			StartCoroutine(StartWave(_timeUntilWaveStart));
 		}
 
 		
 		
-		private IEnumerator StartWave(){
-			yield return new WaitForSeconds(_timeUntilWaveStart);
+		private IEnumerator StartWave(float delay)
+		{
+			yield return new WaitForSeconds(delay);
 			for (int i = 0; i < _enemyCount; i++)
 			{
 				if (_randomizePosition)

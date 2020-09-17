@@ -5,7 +5,6 @@ namespace FG {
 	public class Seeker : MonoBehaviour
 	{
 		private Transform _transform;
-		private Rigidbody2D _body;
 		private Vector2 _endPos;
 		private float _movementTimer;
 		private float _timeSinceLastShot;
@@ -18,7 +17,6 @@ namespace FG {
 		private void Start()
 		{
 			_transform = transform;
-			_body = GetComponent<Rigidbody2D>();
 			_endPos = new Vector2(_transform.position.x, _transform.position.y-5);
 			_weaponManager = GetComponent<WeaponManager>();
 			_player = GameObject.Find("Player");

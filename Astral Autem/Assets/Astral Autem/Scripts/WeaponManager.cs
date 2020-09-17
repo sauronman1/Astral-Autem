@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace FG {
@@ -6,7 +7,8 @@ namespace FG {
 	{
 		Bullet,
 		Killer,
-		EnemyBullet
+		SeekerBullet,
+		InquisitorBullet
 	}
 	
 	public class WeaponManager : MonoBehaviour
@@ -15,6 +17,7 @@ namespace FG {
 		public Weapon weapon;
 
 		private IWeapon iWeapon;
+		private int _bulletQue = 0;
 
 		private void HandleWeapon(Weapon chosenWeapon)
 		{
@@ -33,8 +36,11 @@ namespace FG {
 				case Weapon.Killer:
 					iWeapon = gameObject.AddComponent<Killer>();
 					break;
-				case Weapon.EnemyBullet:
-					iWeapon = gameObject.AddComponent<EnemyProjectile>();
+				case Weapon.SeekerBullet:
+					iWeapon = gameObject.AddComponent<SeekerWeapon>();
+					break;
+				case Weapon.InquisitorBullet:
+					iWeapon = gameObject.AddComponent<InquisitorWeapon>();
 					break;
 				default:
 					iWeapon = gameObject.AddComponent<Bullet>();

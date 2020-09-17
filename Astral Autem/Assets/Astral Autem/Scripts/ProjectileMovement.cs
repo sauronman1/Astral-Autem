@@ -5,17 +5,15 @@ namespace FG {
 	{
 		private Transform _transform;
 		private Rigidbody2D _body;
-		
+		private float _timer;
+
 		public int bulletDamage;
+		public int bulletLife;
 
 		private void Start()
 		{
 			_transform = transform;
 			_body = GetComponent<Rigidbody2D>();
-			if (_transform.parent != null)
-				Destroy(_transform.parent.gameObject, 3);
-			else
-				Destroy(gameObject,3);
 		}
 
 		private void Update()
@@ -26,6 +24,17 @@ namespace FG {
 		private void Move()
 		{
 			_body.velocity = _transform.up * 3;
+		}
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (other.CompareTag("BulletBoundary"))
+			{
+				if (_transform.parent != null)
+					Destroy(_transform.parent.gameObject);
+				else
+					Destroy(gameObject);
+			}
 		}
 	}
 }

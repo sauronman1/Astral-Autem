@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 1
+  bulletLife: 2
 --- !u!61 &7871097089712054273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 1
+  bulletLife: 2
 --- !u!61 &156638757279947050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -421,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 1
+  bulletLife: 2
 --- !u!61 &1145234732247607023
 BoxCollider2D:
   m_ObjectHideFlags: 0

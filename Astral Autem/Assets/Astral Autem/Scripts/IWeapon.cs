@@ -11,7 +11,6 @@ namespace FG {
 		public void Shoot()
 		{
 			GameObject bullet = Instantiate(Resources.Load("ProjectilePrefab",typeof(GameObject)), transform.position, transform.rotation) as GameObject;
-			
 		}
 	}
 	
@@ -23,13 +22,19 @@ namespace FG {
 		}
 	}
 	
-	public class EnemyProjectile : MonoBehaviour, IWeapon
+	public class SeekerWeapon : MonoBehaviour, IWeapon
 	{
 		public void Shoot()
 		{
-
-			GameObject enemyProjectile = Instantiate(Resources.Load("Enemy Bullet", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
-			
+			GameObject enemyProjectile = Instantiate(Resources.Load("Seeker Bullet", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
+		}
+	}
+	
+	public class InquisitorWeapon : MonoBehaviour, IWeapon
+	{
+		public void Shoot()
+		{
+			GameObject enemyProjectile = Instantiate(Resources.Load("Inquisitor Bullet", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
 		}
 	}
 }

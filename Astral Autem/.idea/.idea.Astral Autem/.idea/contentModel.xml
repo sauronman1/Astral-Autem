@@ -8,7 +8,6 @@
       <e p="Assets" t="Include">
         <e p="Astral Autem" t="Include">
           <e p="Scripts" t="Include">
-            <e p="CHECKIT.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="EnemySpawner.cs" t="Include" />
               <e p="Inquisitor.cs" t="Include" />
