@@ -9,6 +9,8 @@ TagManager:
   - EnemyBullet
   - Shield
   - Missile
+  - Blaster
+  - ScatterShot
   layers:
   - Default
   - TransparentFX

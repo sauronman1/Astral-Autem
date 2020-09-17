@@ -30,7 +30,6 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Scaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/CHECKIT.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/EnemySpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/IWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Seeker.cs" />
@@ -38,6 +37,8 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/HomingMissile.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Inquisitor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
       </list>
     </option>
   </component>
@@ -99,6 +100,7 @@
       <workItem from="1600187832426" duration="1466000" />
       <workItem from="1600245262338" duration="6731000" />
       <workItem from="1600265080396" duration="8480000" />
+      <workItem from="1600334791506" duration="4933000" />
     </task>
     <servers />
   </component>

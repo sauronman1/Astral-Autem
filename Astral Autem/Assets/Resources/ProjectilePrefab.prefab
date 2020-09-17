@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4181644817828737138}
   - component: {fileID: 803429950215132147}
   - component: {fileID: 4804064580389608318}
+  - component: {fileID: 1731540621699478028}
   m_Layer: 0
   m_Name: ProjectilePrefab
   m_TagString: PlayerBullet
@@ -123,3 +124,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.57}
   m_EdgeRadius: 0
+--- !u!50 &1731540621699478028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612775978326447592}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

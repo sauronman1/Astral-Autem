@@ -16,7 +16,7 @@ namespace FG {
 
 		private IWeapon iWeapon;
 
-		private void HandleWeapon()
+		private void HandleWeapon(Weapon chosenWeapon)
 		{
 			Component c = gameObject.GetComponent<IWeapon>() as Component;
 
@@ -25,7 +25,7 @@ namespace FG {
 				Destroy(c);
 			}
 
-			switch (weapon)
+			switch (chosenWeapon)
 			{
 				case Weapon.Bullet:
 					iWeapon = gameObject.AddComponent<Bullet>();
@@ -49,7 +49,7 @@ namespace FG {
 
 		private void Start()
 		{
-			HandleWeapon();
+			HandleWeapon(weapon);
 		}
 
 		private void Update()
@@ -62,7 +62,22 @@ namespace FG {
 
 			if (Input.GetKeyDown(KeyCode.C))
 			{
-				HandleWeapon();
+				HandleWeapon(weapon);
+			}
+		}
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			switch (other.tag)
+			{
+				case "Blaster":
+					HandleWeapon(Weapon.Bullet);
+					Destroy(other.gameObject);
+					break;
+				case "ScatterShot":
+					HandleWeapon(Weapon.Killer);
+					Destroy(other.gameObject);
+					break;
 			}
 		}
 	}

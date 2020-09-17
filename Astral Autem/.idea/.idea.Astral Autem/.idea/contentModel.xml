@@ -11,6 +11,7 @@
             <e p="CHECKIT.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="EnemySpawner.cs" t="Include" />
+              <e p="Inquisitor.cs" t="Include" />
               <e p="Seeker.cs" t="Include" />
             </e>
             <e p="Health.cs" t="Include" />
