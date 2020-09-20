@@ -18,7 +18,7 @@ namespace FG {
 			_transform = transform;
 			if(_healthPointsIndicator)
 				_healthPointsIndicator.text = "HP: " + _healthPoints;
-			if(_ship != null)
+			if(_isBoss)
 				_ship = GameObject.Find("Player").GetComponent<ShipController>();
 		}
 
