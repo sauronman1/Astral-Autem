@@ -9,9 +9,7 @@ namespace FG {
 		[NonSerialized] public float verticalMovementInput;
 		[NonSerialized] public bool missileFired = false;
 		[NonSerialized] public float shieldInput;
-		public float playerSpeed;
-		public float shieldCooldown;
-		public float shieldDuration;
+		[NonSerialized] public float tutorialButtonInput;
 		public GameObject victoryScreen;
 		public GameObject shieldIndicator;
 		public GameObject missileIndicator;
@@ -19,6 +17,11 @@ namespace FG {
 		[SerializeField] private GameObject _missile;
 		[SerializeField][Range(5, 0)]private float _maxAllowedHeightWithinScreen; 
 		[SerializeField] private float _missileCooldown;
+		[SerializeField] private GameObject _tutorialScreen;
+		[SerializeField] private float _playerSpeed;
+		[SerializeField] private float _shieldCooldown;
+		[SerializeField] private float _shieldDuration;
+		private bool _showTutorial;
 		private Vector2 _movement;
 		private Vector2 _screenBounds;
 		private Vector2 _screenLockedPosition;
@@ -33,7 +36,6 @@ namespace FG {
 
 		private void Start()
 		{
-			//TODO use sound
 			_transform = transform;
 			_body = GetComponent<Rigidbody2D>();
 			_screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -41,6 +43,7 @@ namespace FG {
 			_playerHeight = _transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
 			victoryScreen.SetActive(false);
 			_timeSinceMissileFired = _missileCooldown + 1;
+			_shieldTimeSinceActivated = _shieldCooldown;
 		}
 
 		private void Update()
@@ -48,13 +51,14 @@ namespace FG {
 			Move();
 			Shield();
 			FireMissile();
+			ShowTutorial();
 		}
 
 		private void Move()
 		{
 			_movement = (_transform.right * sideMovementInput  + _transform.up * verticalMovementInput).normalized;
 			_inputAmount = Mathf.Clamp01(Mathf.Abs(sideMovementInput) + Mathf.Abs(verticalMovementInput));
-			_body.velocity = _movement * (playerSpeed * _inputAmount);
+			_body.velocity = _movement * (_playerSpeed * _inputAmount);
 			_screenLockedPosition = _transform.position;
 			_screenLockedPosition.x = Mathf.Clamp(_transform.position.x, _screenBounds.x * -1 + _playerWidth,
 				_screenBounds.x - _playerWidth);
@@ -65,23 +69,23 @@ namespace FG {
 
 		private void Shield()
 		{
-			if (shieldInput > 0 && _shieldTimeSinceActivated > shieldCooldown)
+			if (shieldInput > 0 && _shieldTimeSinceActivated > _shieldCooldown)
 				_shieldActivated = true;
 
-			if (_shieldTimeSinceActivated > shieldCooldown && !_shieldActivated)
+			if (_shieldTimeSinceActivated > _shieldCooldown && !_shieldActivated)
 			{
-				_shieldTimeSinceActivated = shieldCooldown;
+				_shieldTimeSinceActivated = _shieldCooldown;
 				shieldIndicator.SetActive(true);
 			}
 
 			_shieldTimeSinceActivated += Time.deltaTime;
-			if (_shieldTimeSinceActivated > shieldCooldown)
+			if (_shieldTimeSinceActivated > _shieldCooldown)
 			{
 				if (_shieldActivated)
 				{
 					shieldIndicator.SetActive(false);
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
-					if (_shieldTimeSinceActivated > (shieldDuration + shieldCooldown))
+					if (_shieldTimeSinceActivated > (_shieldDuration + _shieldCooldown))
 					{
 						gameObject.transform.GetChild(0).gameObject.SetActive(false);
 						_shieldActivated = false;
@@ -105,6 +109,15 @@ namespace FG {
 				Instantiate(_missile, _transform.position, _transform.rotation);
 				missileIndicator.SetActive(false);
 				missileFired = true;
+			}
+		}
+
+		private void ShowTutorial()
+		{
+			if (tutorialButtonInput > 0)
+			{
+				_showTutorial = !_showTutorial;
+				_tutorialScreen.SetActive(_showTutorial);
 			}
 		}
 	}

@@ -17,6 +17,7 @@
             <e p="Health.cs" t="Include" />
             <e p="HomingMissile.cs" t="Include" />
             <e p="IWeapon.cs" t="Include" />
+            <e p="PickUpSpawner.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerInput.cs" t="Include" />
               <e p="ShipController.cs" t="Include" />

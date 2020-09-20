@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Astral Autem/Scripts/PickUpSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/e6/3532d2dc/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Seeker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -27,18 +28,20 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/CHECKIT.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/SpawnerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManagerTEST.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Scaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/HomingMissile.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Seeker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/IWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Inquisitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Principality.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ProjectileMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/PickapblesSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/PickUpSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" />
       </list>
@@ -108,6 +111,7 @@
       <workItem from="1600423073232" duration="3475000" />
       <workItem from="1600540158389" duration="4637000" />
       <workItem from="1600588116126" duration="7284000" />
+      <workItem from="1600621207560" duration="2941000" />
     </task>
     <servers />
   </component>

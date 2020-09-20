@@ -19,6 +19,7 @@ namespace FG {
 			_weaponManager.fired = Input.GetButtonDown("Fire1");
 			_ship.shieldInput = Input.GetAxis("Shield");
 			_ship.missileFired = Input.GetButtonDown("FireMissile");
+			_ship.tutorialButtonInput = Input.GetAxis("Tutorial");
 		}
 	}
 }

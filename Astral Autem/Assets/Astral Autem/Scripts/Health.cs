@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace FG {
 	public class Health : MonoBehaviour
@@ -8,13 +9,17 @@ namespace FG {
 		[SerializeField] private GameObject _bulletCollisionParticle;
 		[SerializeField] private bool _isBoss;
 		[SerializeField] private ShipController _ship;
+		[SerializeField] private Text _healthPointsIndicator;
 		private GameObject _canvas;
 		private Transform _transform;
 
 		private void Start()
 		{
 			_transform = transform;
-			_ship = GameObject.Find("Player").GetComponent<ShipController>();
+			if(_healthPointsIndicator)
+				_healthPointsIndicator.text = "HP: " + _healthPoints;
+			if(_ship != null)
+				_ship = GameObject.Find("Player").GetComponent<ShipController>();
 		}
 
 		private void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +38,7 @@ namespace FG {
 				_healthPoints -= other.GetComponent<ProjectileMovement>().bulletDamage;
 				GameObject particleExplosion = Instantiate(_bulletCollisionParticle);
 				particleExplosion.transform.position = other.transform.position;
+				_healthPointsIndicator.text = "HP: " + _healthPoints;
 				Destroy(particleExplosion,1);
 				Destroy(other.gameObject);
 			}

@@ -78,16 +78,19 @@ namespace FG {
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
-			switch (other.tag)
+			if (gameObject.CompareTag("Player"))
 			{
-				case "Blaster":
-					HandleWeapon(Weapon.Bullet);
-					Destroy(other.gameObject);
-					break;
-				case "ScatterShot":
-					HandleWeapon(Weapon.Killer);
-					Destroy(other.gameObject);
-					break;
+				switch (other.tag)
+				{
+					case "Blaster":
+						HandleWeapon(Weapon.Bullet);
+						Destroy(other.gameObject);
+						break;
+					case "ScatterShot":
+						HandleWeapon(Weapon.Killer);
+						Destroy(other.gameObject);
+						break;
+				}
 			}
 		}
 	}
