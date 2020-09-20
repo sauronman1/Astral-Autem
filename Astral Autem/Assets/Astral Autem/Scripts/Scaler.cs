@@ -3,7 +3,8 @@
 namespace FG {
 	public class Scaler : MonoBehaviour
 	{
-		private SpriteRenderer _spriteRend;
+		[SerializeField] private float _speed;
+		private Renderer _renderer;
 		private float _width;
 		private float _height;
 		private Transform _transform;
@@ -11,11 +12,14 @@ namespace FG {
 		private void Start()
 		{
 			_transform = transform;
-			_spriteRend = GetComponent<SpriteRenderer>();
-			if (_spriteRend == null) return;
-			_width = _spriteRend.sprite.bounds.size.x;
-			_height = _spriteRend.sprite.bounds.size.y;
-			_transform.localScale = new Vector2(Screen.width / _width, Screen.height / _height);
+			_renderer = GetComponent<Renderer>();
+			if (_renderer == null) return;
+			_transform.localScale = new Vector3(Screen.width , Screen.height, _transform.localScale.z);
+		}
+
+		private void Update()
+		{
+			_renderer.material.mainTextureOffset += new Vector2(0, _speed * Time.deltaTime);
 		}
 	}
 }

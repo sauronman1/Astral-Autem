@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f044855ffc9a684abcbe1715a726596, type: 3}
   m_Name: Inquisitor spawner
   m_EditorClassIdentifier: 
-  _timeUntilWaveStart: 3
+  _timeUntilWaveStart: 25
   _waitTimeBetweenSpawns: 1
   _enemy: {fileID: 2083577605254660872, guid: a69cbcb44cddcfa4f9e99844a4caa5db, type: 3}
   _enemyCount: 10

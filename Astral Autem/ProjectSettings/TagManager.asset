@@ -12,6 +12,7 @@ TagManager:
   - Blaster
   - ScatterShot
   - BulletBoundary
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX

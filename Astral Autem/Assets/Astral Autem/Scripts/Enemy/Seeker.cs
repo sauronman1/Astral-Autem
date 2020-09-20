@@ -4,6 +4,9 @@ using UnityEngine;
 namespace FG {
 	public class Seeker : MonoBehaviour
 	{
+		[SerializeField] private float _rotationSmoothnes;
+		[SerializeField] private float _distance;
+		[SerializeField] private float shooterCooldown;
 		private Transform _transform;
 		private Vector2 _endPos;
 		private float _movementTimer;
@@ -12,12 +15,11 @@ namespace FG {
 		private WeaponManager _weaponManager;
 		private GameObject _player;
 
-		public float shooterCooldown;
 
 		private void Start()
 		{
 			_transform = transform;
-			_endPos = new Vector2(_transform.position.x, _transform.position.y-5);
+			_endPos = new Vector2(_transform.position.x, _transform.position.y-_distance);
 			_weaponManager = GetComponent<WeaponManager>();
 			_player = GameObject.Find("Player");
 		}
@@ -41,9 +43,12 @@ namespace FG {
 			
 			if (Vector2.Distance(_transform.position, _endPos) < 1)
 			{
-				Vector2 difference = _player.transform.position - transform.position;
-				float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-				_transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ - 90);
+				if (_player != null)
+				{
+					Vector2 difference = _player.transform.position - transform.position;
+					float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+					_transform.rotation = Quaternion.Lerp(_transform.rotation,Quaternion.Euler(0.0f, 0.0f, rotationZ - 90), Time.time * _rotationSmoothnes);
+				}
 			}
 		}
 

@@ -12,9 +12,13 @@ namespace FG {
 		public float playerSpeed;
 		public float shieldCooldown;
 		public float shieldDuration;
+		public GameObject victoryScreen;
+		public GameObject shieldIndicator;
+		public GameObject missileIndicator;
 
 		[SerializeField] private GameObject _missile;
-		[SerializeField][Range(5, 0)]private float _maxAllowedHeightWithinScreen;
+		[SerializeField][Range(5, 0)]private float _maxAllowedHeightWithinScreen; 
+		[SerializeField] private float _missileCooldown;
 		private Vector2 _movement;
 		private Vector2 _screenBounds;
 		private Vector2 _screenLockedPosition;
@@ -23,16 +27,20 @@ namespace FG {
 		private float _playerWidth;
 		private float _playerHeight;
 		private float _inputAmount;
-		public float shieldTimeSinceActivated;
-		public bool shieldActivated;
+		private float _shieldTimeSinceActivated;
+		private float _timeSinceMissileFired;
+		private bool _shieldActivated;
 
 		private void Start()
 		{
+			//TODO use sound
 			_transform = transform;
 			_body = GetComponent<Rigidbody2D>();
 			_screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 			_playerWidth = _transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
 			_playerHeight = _transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+			victoryScreen.SetActive(false);
+			_timeSinceMissileFired = _missileCooldown + 1;
 		}
 
 		private void Update()
@@ -57,23 +65,27 @@ namespace FG {
 
 		private void Shield()
 		{
-			if (shieldInput > 0 && shieldTimeSinceActivated > shieldCooldown)
-				shieldActivated = true;
-			
-			if (shieldTimeSinceActivated > shieldCooldown && !shieldActivated) 
-				shieldTimeSinceActivated = shieldCooldown;
-			
-			shieldTimeSinceActivated += Time.deltaTime;
-			if (shieldTimeSinceActivated > shieldCooldown)
+			if (shieldInput > 0 && _shieldTimeSinceActivated > shieldCooldown)
+				_shieldActivated = true;
+
+			if (_shieldTimeSinceActivated > shieldCooldown && !_shieldActivated)
 			{
-				if (shieldActivated)
+				_shieldTimeSinceActivated = shieldCooldown;
+				shieldIndicator.SetActive(true);
+			}
+
+			_shieldTimeSinceActivated += Time.deltaTime;
+			if (_shieldTimeSinceActivated > shieldCooldown)
+			{
+				if (_shieldActivated)
 				{
+					shieldIndicator.SetActive(false);
 					gameObject.transform.GetChild(0).gameObject.SetActive(true);
-					if (shieldTimeSinceActivated > (shieldDuration + shieldCooldown))
+					if (_shieldTimeSinceActivated > (shieldDuration + shieldCooldown))
 					{
 						gameObject.transform.GetChild(0).gameObject.SetActive(false);
-						shieldActivated = false;
-						shieldTimeSinceActivated = 0;
+						_shieldActivated = false;
+						_shieldTimeSinceActivated = 0;
 					}
 				}
 
@@ -82,9 +94,16 @@ namespace FG {
 
 		private void FireMissile()
 		{
-			if (missileFired)
+			_timeSinceMissileFired += Time.deltaTime;
+			if (_timeSinceMissileFired > _missileCooldown)
 			{
+				missileIndicator.SetActive(true);
+			}
+			if (missileFired && _timeSinceMissileFired > _missileCooldown)
+			{
+				_timeSinceMissileFired = 0;
 				Instantiate(_missile, _transform.position, _transform.rotation);
+				missileIndicator.SetActive(false);
 				missileFired = true;
 			}
 		}

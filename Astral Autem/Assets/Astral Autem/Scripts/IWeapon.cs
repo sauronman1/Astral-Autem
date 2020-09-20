@@ -37,4 +37,12 @@ namespace FG {
 			GameObject enemyProjectile = Instantiate(Resources.Load("Inquisitor Bullet", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
 		}
 	}
+	
+	public class PrincipalityWeapon : MonoBehaviour, IWeapon
+	{
+		public void Shoot()
+		{
+			GameObject enemyProjectile = Instantiate(Resources.Load("Multi Strike", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
+		}
+	}
 }

@@ -3,12 +3,13 @@
 namespace FG {
 	public class ProjectileMovement : MonoBehaviour
 	{
+		[SerializeField] private float _speed;
+		[SerializeField] private float _smoothnes;
 		private Transform _transform;
 		private Rigidbody2D _body;
 		private float _timer;
 
 		public int bulletDamage;
-		public int bulletLife;
 
 		private void Start()
 		{
@@ -23,7 +24,7 @@ namespace FG {
 
 		private void Move()
 		{
-			_body.velocity = _transform.up * 3;
+			_body.velocity = _transform.up * _speed;
 		}
 
 		private void OnTriggerEnter2D(Collider2D other)

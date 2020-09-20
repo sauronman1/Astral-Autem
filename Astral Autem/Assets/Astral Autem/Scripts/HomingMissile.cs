@@ -3,6 +3,7 @@
 namespace FG {
 	public class HomingMissile : MonoBehaviour
 	{
+		[SerializeField] private float _rotationSmoothnes;
 		private GameObject[] _targets;
 		private Transform _nearestTarget;
 		private Transform _transform;
@@ -61,7 +62,7 @@ namespace FG {
 			{
 				Vector2 difference = _nearestTarget.transform.position - transform.position;
 				float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-				_transform.rotation = transform.rotation = Quaternion.Lerp(_transform.rotation, Quaternion.Euler(0.0f, 0.0f, rotationZ - 90), Time.time * 0.01f);
+				_transform.rotation = transform.rotation = Quaternion.Lerp(_transform.rotation, Quaternion.Euler(0.0f, 0.0f, rotationZ - 90), Time.time * _rotationSmoothnes);
 			}
 			_body.velocity = _transform.up * speed;
 		}

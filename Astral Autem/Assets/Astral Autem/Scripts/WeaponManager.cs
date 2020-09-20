@@ -8,7 +8,8 @@ namespace FG {
 		Bullet,
 		Killer,
 		SeekerBullet,
-		InquisitorBullet
+		InquisitorBullet,
+		MultiStrike
 	}
 	
 	public class WeaponManager : MonoBehaviour
@@ -41,6 +42,9 @@ namespace FG {
 					break;
 				case Weapon.InquisitorBullet:
 					iWeapon = gameObject.AddComponent<InquisitorWeapon>();
+					break;
+				case Weapon.MultiStrike:
+					iWeapon = gameObject.AddComponent<PrincipalityWeapon>();
 					break;
 				default:
 					iWeapon = gameObject.AddComponent<Bullet>();
