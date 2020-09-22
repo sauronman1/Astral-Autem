@@ -153,8 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizePosition: 0
-  _timeUntilWaveStart: 0
-  data: {fileID: 11400000, guid: 4b141a95f929fa543b6c750e4ca944e5, type: 2}
+  _data: {fileID: 11400000, guid: 4b141a95f929fa543b6c750e4ca944e5, type: 2}
 --- !u!4 &102730379
 Transform:
   m_ObjectHideFlags: 0
@@ -364,8 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizePosition: 0
-  _timeUntilWaveStart: 0
-  data: {fileID: 11400000, guid: 02437d83c6237cc4391afde86ce9646b, type: 2}
+  _data: {fileID: 11400000, guid: 02437d83c6237cc4391afde86ce9646b, type: 2}
 --- !u!4 &440978068
 Transform:
   m_ObjectHideFlags: 0
@@ -410,8 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _randomizePosition: 1
-  _timeUntilWaveStart: 0
-  data: {fileID: 11400000, guid: 7fa5457eca5f1bc4c90f2ccf42dfe164, type: 2}
+  _data: {fileID: 11400000, guid: 7fa5457eca5f1bc4c90f2ccf42dfe164, type: 2}
 --- !u!4 &465716899
 Transform:
   m_ObjectHideFlags: 0
@@ -1466,7 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2587f109ba2a743ad137c9bb8535f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: 0
+  _weapon: 0
 --- !u!61 &1613405345
 BoxCollider2D:
   m_ObjectHideFlags: 0

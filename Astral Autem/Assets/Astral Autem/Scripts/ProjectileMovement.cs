@@ -4,7 +4,6 @@ namespace FG {
 	public class ProjectileMovement : MonoBehaviour
 	{
 		[SerializeField] private float _speed;
-		[SerializeField] private float _smoothnes;
 		private Transform _transform;
 		private Rigidbody2D _body;
 		private float _timer;

@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2587f109ba2a743ad137c9bb8535f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: 2
+  _weapon: 2
 --- !u!114 &3648598149152197230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +157,8 @@ MonoBehaviour:
   _explosionParticle: {fileID: 5442947302536254407, guid: aa573c515164dc84fb58078ef19fe20e, type: 3}
   _bulletCollisionParticle: {fileID: 8884211224071097067, guid: ba1cc424259acb1488bb59295daaaff7, type: 3}
   _isBoss: 0
-  _victoryScreen: {fileID: 0}
+  _ship: {fileID: 0}
+  _healthPointsIndicator: {fileID: 0}
 --- !u!1001 &2826353201021236128
 PrefabInstance:
   m_ObjectHideFlags: 0

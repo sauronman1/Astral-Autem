@@ -15,8 +15,8 @@ namespace FG {
 	public class WeaponManager : MonoBehaviour
 	{
 		[NonSerialized] public bool fired;
-		public Weapon weapon;
-
+		
+		[SerializeField] private Weapon _weapon;
 		private IWeapon iWeapon;
 		private int _bulletQue = 0;
 
@@ -59,7 +59,7 @@ namespace FG {
 
 		private void Start()
 		{
-			HandleWeapon(weapon);
+			HandleWeapon(_weapon);
 		}
 
 		private void Update()
@@ -72,7 +72,7 @@ namespace FG {
 
 			if (Input.GetKeyDown(KeyCode.C))
 			{
-				HandleWeapon(weapon);
+				HandleWeapon(_weapon);
 			}
 		}
 

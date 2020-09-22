@@ -29,7 +29,6 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/CHECKIT.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/SpawnerData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManagerTEST.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Scaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/HomingMissile.cs" />
@@ -37,14 +36,15 @@
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/IWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Inquisitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/Principality.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ProjectileMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/PickapblesSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/PickUpSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/StartMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ProjectileMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Enemy/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/WeaponManager.cs" />
       </list>
     </option>
   </component>
@@ -115,6 +115,7 @@
       <workItem from="1600621207560" duration="2941000" />
       <workItem from="1600624835998" duration="334000" />
       <workItem from="1600760129277" duration="1087000" />
+      <workItem from="1600783373091" duration="824000" />
     </task>
     <servers />
   </component>
