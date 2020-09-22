@@ -7,7 +7,7 @@ namespace FG {
 	{
 		[NonSerialized] public float sideMovementInput;
 		[NonSerialized] public float verticalMovementInput;
-		[NonSerialized] public bool missileFired = false;
+		[NonSerialized] public bool missileFired;
 		[NonSerialized] public float shieldInput;
 		[NonSerialized] public float tutorialButtonInput;
 		public GameObject victoryScreen;

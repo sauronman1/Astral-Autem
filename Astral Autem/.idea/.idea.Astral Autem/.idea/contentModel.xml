@@ -25,6 +25,7 @@
             <e p="ProjectileMovement.cs" t="Include" />
             <e p="Scaler.cs" t="Include" />
             <e p="SpawnerData.cs" t="Include" />
+            <e p="StartMenu.cs" t="Include" />
             <e p="WeaponManager.cs" t="Include" />
           </e>
         </e>
