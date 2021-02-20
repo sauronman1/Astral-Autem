@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\aboud\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\aboud\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Astral Autum.-417039097.00" t="ExcludeRecursive" />
+    <e p="D:\repos\03_Astral_Autem\Astral-Autem\Astral Autum" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Astral Autem" t="Include">
+          <e p="Material" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="CustomImageEffect.shader" t="Include" />
+              <e p="HealthBar.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="CHECKIT.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="EnemySpawner.cs" t="Include" />
+              <e p="Inquisitor.cs" t="Include" />
+              <e p="Principality.cs" t="Include" />
+              <e p="Seeker.cs" t="Include" />
+            </e>
+            <e p="Health.cs" t="Include" />
+            <e p="HomingMissile.cs" t="Include" />
+            <e p="IWeapon.cs" t="Include" />
+            <e p="PickUpSpawner.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="PlayerInput.cs" t="Include" />
+              <e p="ShipController.cs" t="Include" />
+            </e>
+            <e p="ProjectileMovement.cs" t="Include" />
+            <e p="Scaler.cs" t="Include" />
+            <e p="SliderBar.cs" t="Include" />
+            <e p="SpawnerData.cs" t="Include" />
+            <e p="StartMenu.cs" t="Include" />
+            <e p="WeaponManagerTEST.cs" t="Include" />
+            <e p="WeaponsManager.cs" t="Include" />
+            <e p="WeaponsSystem.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ScriptTemplates" t="Include">
+          <e p="78-C_Script-NewBehaviourScript.cs.txt" t="Include" />
+          <e p="79-C_Scriptable_object-ScriptableObjectScript.cs.txt" t="Include" />
+          <e p="80-C_Interface-NewInterfaceScript.cs.txt" t="Include" />
+        </e>
+        <e p="Spritesheet" t="Include">
+          <e p="sheet.xml" t="Include" />
+        </e>
+      </e>
+      <e p="Astral Autum.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
