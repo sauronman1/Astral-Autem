@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39d261b9-3181-41d9-b05e-9ec67a639414" name="Default Changelist" comment="" />
+    <list default="true" id="39d261b9-3181-41d9-b05e-9ec67a639414" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Astral Autum/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Astral Autum/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Astral Autum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Astral Autum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +23,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/SliderBar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Player/ShipController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/ProjectileMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Astral Autem/Scripts/Health.cs" />
     </changedPaths>
   </component>
@@ -77,6 +84,7 @@
       <workItem from="1608545195805" duration="4523000" />
       <workItem from="1608563071225" duration="3898000" />
       <workItem from="1613838728840" duration="6535000" />
+      <workItem from="1613909113331" duration="3821000" />
     </task>
     <servers />
   </component>

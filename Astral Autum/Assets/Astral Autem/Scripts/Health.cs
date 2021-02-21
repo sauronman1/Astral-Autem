@@ -29,7 +29,15 @@ namespace FG {
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
-			if ((other.CompareTag("PlayerBullet") && gameObject.CompareTag("Enemy")) || (other.CompareTag("EnemyBullet") && gameObject.CompareTag("Player")))
+			if (other.CompareTag("EnemyBullet") && gameObject.CompareTag("Player") && GetComponent<ShipController>()._shieldActivated)
+			{
+				GameObject particleExplosion = Instantiate(bulletCollisionParticle);
+				particleExplosion.transform.position = other.transform.position;
+				Destroy(particleExplosion,1);
+				Destroy(other.gameObject);
+			}
+			
+			if ((other.CompareTag("PlayerBullet") && gameObject.CompareTag("Enemy")) || (other.CompareTag("EnemyBullet") && gameObject.CompareTag("Player") && !GetComponent<ShipController>()._shieldActivated))
 			{
 				//TODO change script name to Bullet
 				healthPoints -= other.GetComponent<ProjectileMovement>().bulletDamage;
@@ -40,7 +48,6 @@ namespace FG {
 				Destroy(particleExplosion,1);
 				Destroy(other.gameObject);
 			}
-			
 			else if (other.CompareTag("Missile") && gameObject.CompareTag("Enemy"))
 			{
 				healthPoints -= other.GetComponent<HomingMissile>().missileDamage;

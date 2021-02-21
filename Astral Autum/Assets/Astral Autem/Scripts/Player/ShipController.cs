@@ -5,14 +5,16 @@ using UnityEngine.Serialization;
 namespace FG {
 	public class ShipController : MonoBehaviour
 	{
-		[NonSerialized] public float sideMovementInput;
-		[NonSerialized] public float verticalMovementInput;
-		[NonSerialized] public bool missileFired;
-		[NonSerialized] public float shieldInput;
-		[NonSerialized] public float tutorialButtonInput;
-		public GameObject victoryScreen;
-		public GameObject shieldIndicator;
-		public GameObject missileIndicator;
+		[NonSerialized] public float      sideMovementInput;
+		[NonSerialized] public float      verticalMovementInput;
+		[NonSerialized] public bool       missileFired;
+		[NonSerialized] public float      shieldInput;
+		[NonSerialized] public float      tutorialButtonInput;
+		public                 GameObject victoryScreen;
+		public                 GameObject shieldIndicator;
+		public                 GameObject missileIndicator;
+		public                 bool       _shieldActivated { get; private set; }
+
 
 		[SerializeField]              private GameObject     _missile;
 		[SerializeField]              private GameObject     _playerHealthBar;
@@ -34,7 +36,6 @@ namespace FG {
 		private                               float          _inputAmount;
 		private                               float          _shieldTimeSinceActivated;
 		private                               float          _timeSinceMissileFired;
-		private                               bool           _shieldActivated;
 
 		private void Start()
 		{
